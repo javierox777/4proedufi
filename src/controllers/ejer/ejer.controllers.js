@@ -3,9 +3,7 @@ const ctrls = {}
 
 
 ctrls.createEjer = async(req, res)=>{
-    const {  tiempo,
-        tipo,
-        url} = req.body
+    const {  tiempo,tipo,url} = req.body
 
         const newEjer = await ModelEje.create({tiempo,
             tipo,

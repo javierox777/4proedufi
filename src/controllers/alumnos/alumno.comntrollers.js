@@ -3,9 +3,9 @@ const ModelAlumno = require("../../models/alumnos/alumno.model")
 const ctrls = {}
 
 ctrls.createAlumno = async (req, res)=>{
-    const {nombre, apellido, edad} = req.body
+    const {run, nombre, apellido, fec_nac, imc, peso, curso, edad} = req.body
 
-    const newAlumno = await ModelAlumno.create({nombre, apellido, edad})
+    const newAlumno = await ModelAlumno.create({run, nombre, apellido, fec_nac, imc, peso, curso, edad})
     res.json(newAlumno)
 }
 
@@ -17,12 +17,17 @@ ctrls.leeralumno = async(req, res)=>{
 
 ctrls.updateAlumnos = async (req, res)=>{
     const _id = req.params.id
-    const {nombre, apellido, edad} = req.body 
-    console.log(nombre, apellido, edad)
+    const {run, nombre, apellido, fec_nac, imc, peso, curso, edad} = req.body 
+    console.log(run, nombre, apellido, fec_nac, imc, peso, curso, edad)
     const alumnoActualizado = await ModelAlumno.findByIdAndUpdate({_id},{
+        run,
         nombre,
-         apellido,
-          edad
+        apellido,
+        fec_nac,
+        imc,
+        peso,
+        curso,
+        edad,
     })
     res.json("usuario actualizado", alumnoActualizado )
 }

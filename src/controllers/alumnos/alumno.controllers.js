@@ -3,9 +3,9 @@ const ModelAlumno = require("../../models/alumnos/alumno.model")
 const ctrls = {}
 
 ctrls.createAlumno = async (req, res)=>{
-    const {nombre, apellido, edad} = req.body
+    const {run, nombre, apellido, fec_nac, peso, curso} = req.body
 
-    const newAlumno = await ModelAlumno.create({nombre, apellido, edad})
+    const newAlumno = await ModelAlumno.create({run, nombre, apellido, fec_nac, peso, curso})
     res.json(newAlumno)
 }
 
@@ -14,4 +14,4 @@ ctrls.leeralumno = async(req, res)=>{
     res.json(data)
 }
 
-module.exports = ctrls
+module.exports = ctrls 

@@ -6,7 +6,8 @@ const schemaCalen = new Schema({
    D_descanso:Number,
    D_cumplidos:Number,
    Dn_cumplidos:Number,
-   racha:Number
+   racha:Number,
+   dia:Date
 
     
 })

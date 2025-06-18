@@ -1,10 +1,10 @@
 const {Schema, model} = require("mongoose")
 
 
-const schemaEjer = new Schema({
+const schemanoti = new Schema({
     calendario,
     rutina
 })
    
 
-module.exports = model("ejer", schemaEjer )
+module.exports = model("noti.model", schemanoti.model )

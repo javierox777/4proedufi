@@ -1,4 +1,4 @@
-const Modelcalendario = require(".../.../models/calendario/calendario.model")
+const Modelcalendario = require("../../models/calendario/calendario.model")
 
 const ctrls = {}
 

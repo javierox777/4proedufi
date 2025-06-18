@@ -1,4 +1,5 @@
-const Modelcalendario = require(".../.../models/calendario/calendario.model")
+const notiModel = require("../../models/notificaciones/noti.model")
+
 
 const ctrls = {}
 
@@ -14,7 +15,7 @@ ctrls.updatenotif = async (req, res)=>{
     const _id = req.params.id
     const {calendario, rutina} = req.body 
     console.log(calendario, rutina)
-    const Notificacionact = await ModelAlumno.findByIdAndUpdate({_id},{
+    const Notificacionact = await notiModel.findByIdAndUpdate({_id},{
           calendario,
           rutina
     })

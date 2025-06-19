@@ -1,6 +1,5 @@
 const ModelAlumno = require("../../../models/alumnos/alumno.model")
 
-
 const signup = async (req, res) => {
   const {run, nombre, nombre_usuario, apellido, email, password, confirmPassword, genero, curso, edad, fec_nac, altura, peso} = req.body;
 

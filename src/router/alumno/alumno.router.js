@@ -1,11 +1,12 @@
 const {Router} = require("express")
-const {createAlumno, leeralumno, updateAlumnos, deletealumno} = require("../../controllers/alumnos/alumno.comntrollers")
+const {createAlumno, getAlumno, getAlumnos, updateAlumno, deleteAlumno} = require("../../controllers/alumnos/alumno.controllers")
 const router = Router()
 
-router.post("/createalumno",createAlumno)
-router.get("/leeralumno",leeralumno)
-router.put("/updatealumno/:id", updateAlumnos)
-router.delete("/eliminaralumno/:id", deletealumno)
+router.get("/leerAlumnos", getAlumnos)
+router.get("/leerAlumno/:id", getAlumno)
+router.post("/createAlumno", createAlumno)
+router.put("/updateAlumno/:id", updateAlumno)
+router.delete("/eliminarAlumno/:id", deleteAlumno)
 
 module.exports = router
 

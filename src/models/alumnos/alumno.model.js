@@ -11,7 +11,7 @@ const schemaAlumno = new Schema({
     genero:String,
     curso:String,
     edad:Number,
-    fec_nac:Date,
+    fec_nac:String,
     altura:String,
     peso:String
 })

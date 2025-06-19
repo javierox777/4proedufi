@@ -11,13 +11,15 @@ const routerUsuario = require('./router/usuario/usuario')
 
 const cors = require('cors')
 
+const PORT = process.env.PORT || 3000
+
 //App Express
 const express = require("express")
 const app = express()
 
 
 //start server
-app.set("port", process.env.PORT || 3000)
+app.set("port", PORT)
 
 //middleware
 app.use(express.json())

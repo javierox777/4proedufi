@@ -1,10 +1,11 @@
 const notiModel = require("../../models/notificaciones/noti.model")
+const ctrls = require("../alumnos/alumno.comntrollers")
 
 
-const ctrls = {}
+ctrls = {}
 
 
-ctrls.createnotif = async (req, res)=>{
+ctrls.createnotificacion = async (req, res)=>{
     const {calendario, rutina} = req.body
 
     const newnoti = await Modelcalendario.create({calendario, rutina})

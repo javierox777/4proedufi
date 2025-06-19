@@ -2,9 +2,9 @@ const {Schema, model} = require("mongoose")
 
 
 const schemanoti = new Schema({
-    calendario,
-    rutina
+    calendario:Number,
+    rutina:String
 })
    
 
-module.exports = model("noti.model", schemanoti.model )
+module.exports = model("noti.model", schemanoti )

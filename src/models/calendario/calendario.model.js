@@ -1,7 +1,7 @@
 const {Schema, model} = require("mongoose")
 
 
-const schemaCalen = new Schema({
+const schemaCalendario = new Schema({
    D_trabajar:Number,
    D_descanso:Number,
    D_cumplidos:Number,
@@ -12,4 +12,4 @@ const schemaCalen = new Schema({
     
 })
 
-module.exports = model("calendario", schemaCalen )
+module.exports = model("calendario", schemaCalendario )

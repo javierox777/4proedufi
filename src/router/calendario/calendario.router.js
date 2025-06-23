@@ -1,9 +1,9 @@
 const {Router} = require("express")
-const {createCalendario, calendarioActualizado} = require("../../controllers/calendario/calendario.controllers")
+const {createcalendario, updatecalendario} = require("../../controllers/calendario/calendario.controllers")
 const router = Router()
 
-router.post("/createacalendario", createCalendario)
-router.put("/actualizarcalendario/:id", calendarioActualizado)
+router.post ("/createcalendario", createcalendario)
+router.put ("/updatecalendario/:id", updatecalendario)
 
 
 module.exports = router

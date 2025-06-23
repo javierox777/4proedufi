@@ -1,5 +1,5 @@
-const {Router} = require("express")
-const {createnotificacion, updatenotif} = require("../../controllers/notificaciones/noti.controllers")
+const { Router } = require("express")
+const { createnotificacion , updatenotif } = require("../../controllers/notificaciones/noti.controllers")
 const router = Router()
 
 router.post("/createnotificacion", createnotificacion)

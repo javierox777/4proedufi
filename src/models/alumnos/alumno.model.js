@@ -9,7 +9,8 @@ const schemaAlumno = new Schema({
     imc:String,
     peso:String,
     curso:String,
-    edad:Number
+    edad:Number,
+    gmail:String
     
 })
 

@@ -1,7 +1,7 @@
 const Modelcalendario = require("../../models/calendario/calendario.model")
 
-const ctrls = {}
 
+const ctrls = {}
 
 ctrls.createcalendario = async (req, res)=>{
     const {D_trabajar, D_descanso, D_cumplidos, Dn_cumplidos, racha} = req.body
@@ -23,4 +23,6 @@ ctrls.updatecalendario = async (req, res)=>{
         dia
     })
     res.json("calendario actualizado", calendarioActualizado )
+    
 }
+   

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const uri = "mongodb+srv://joel:12345@mernapp.4si7u1j.mongodb.net/colegio?retryWrites=true&w=majority&appName=MERNapp"
+const uri = "mongodb://localhost/escuela"
 
 const ConnectDB = async () => {
     try {

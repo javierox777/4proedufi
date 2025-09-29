@@ -3,9 +3,9 @@ const morgan = require("morgan");
 const cors = require("cors");
 const express = require("express");
 
-const routerAlumno = require("./router/alumno/alumno.router");
-const routerEjer = require("./router/ejer/ejer.router");
-const routerUsuario = require("./router/usuario/usuario");
+const alumnoRoutes = require("./router/alumno/alumno.router");
+const ejerRoutes = require("./router/ejer/ejer.router");
+const authRoutes = require("./router/user.auth/auth");
 
 const connectDB = require("./config/db");
 
@@ -18,9 +18,9 @@ app.use(cors());
 app.use(morgan("dev")); // si quieres ver logs de requests
 
 // Rutas
-app.use("/api", routerAlumno);
-app.use("/api", routerEjer);
-app.use("/api/usuario", routerUsuario);
+app.use("/api", alumnoRoutes);
+app.use("/api", ejerRoutes);
+app.use("/api/auth", authRoutes);
 
 // Conectar DB y levantar servidor
 const port = 3000;

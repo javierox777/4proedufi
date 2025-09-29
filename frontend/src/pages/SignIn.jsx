@@ -13,10 +13,10 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import MuiCard from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
-import ForgotPassword from '../componentes/ForgotPassword';
+import ForgotPassword from '../components/ForgotPassword';
 import AppTheme from '../theme/AppTheme';
 import ColorModeSelect from '../theme/ColorModeSelect';
-import { GoogleIcon, FacebookIcon } from '../componentes/CustomIcons';
+import { GoogleIcon, FacebookIcon } from '../components/CustomIcons';
 
 const Card = styled(MuiCard)(({ theme }) => ({
   display: 'flex',
@@ -95,7 +95,7 @@ export default function SignIn(props) {
 
     if (!email.value || !/\S+@\S+\.\S+/.test(email.value)) {
       setEmailError(true);
-      setEmailErrorMessage('Please enter a valid email address.');
+      setEmailErrorMessage('Por favor, introduce una dirección de correo electrónico válida.');
       isValid = false;
     } else {
       setEmailError(false);
@@ -104,7 +104,7 @@ export default function SignIn(props) {
 
     if (!password.value || password.value.length < 6) {
       setPasswordError(true);
-      setPasswordErrorMessage('Password must be at least 6 characters long.');
+      setPasswordErrorMessage('La contraseña debe tener al menos 6 caracteres.');
       isValid = false;
     } else {
       setPasswordError(false);
@@ -125,7 +125,7 @@ export default function SignIn(props) {
             variant="h4"
             sx={{ width: '100%', fontSize: 'clamp(2rem, 10vw, 2.15rem)' }}
           >
-            Sign in
+            Iniciar Sesión
           </Typography>
           <Box
             component="form"
@@ -139,14 +139,14 @@ export default function SignIn(props) {
             }}
           >
             <FormControl>
-              <FormLabel htmlFor="email">Email</FormLabel>
+              <FormLabel htmlFor="email">Correo</FormLabel>
               <TextField
                 error={emailError}
                 helperText={emailErrorMessage}
                 id="email"
                 type="email"
                 name="email"
-                placeholder="your@email.com"
+                placeholder="pedro@gmail.com"
                 autoComplete="email"
                 autoFocus
                 required
@@ -156,7 +156,7 @@ export default function SignIn(props) {
               />
             </FormControl>
             <FormControl>
-              <FormLabel htmlFor="password">Password</FormLabel>
+              <FormLabel htmlFor="password">Contraseña</FormLabel>
               <TextField
                 error={passwordError}
                 helperText={passwordErrorMessage}
@@ -164,7 +164,7 @@ export default function SignIn(props) {
                 placeholder="••••••"
                 type="password"
                 id="password"
-                autoComplete="current-password"
+                autoComplete="new-password"
                 autoFocus
                 required
                 fullWidth
@@ -183,7 +183,7 @@ export default function SignIn(props) {
               variant="contained"
               onClick={validateInputs}
             >
-              Sign in
+              Iniciar Sesión
             </Button>
             <Link
               component="button"
@@ -192,7 +192,7 @@ export default function SignIn(props) {
               variant="body2"
               sx={{ alignSelf: 'center' }}
             >
-              Forgot your password?
+              Olvidaste tu contraseña?
             </Link>
           </Box>
           <Divider>or</Divider>
@@ -203,7 +203,7 @@ export default function SignIn(props) {
               onClick={() => alert('Sign in with Google')}
               startIcon={<GoogleIcon />}
             >
-              Sign in with Google
+              Iniciar Sesión con Google
             </Button>
             <Button
               fullWidth
@@ -214,13 +214,13 @@ export default function SignIn(props) {
               Sign in with Facebook
             </Button>
             <Typography sx={{ textAlign: 'center' }}>
-              Don&apos;t have an account?{' '}
+              No tienes una cuenta?{' '}
               <Link
                 href="/material-ui/getting-started/templates/sign-in/"
                 variant="body2"
                 sx={{ alignSelf: 'center' }}
               >
-                Sign up
+                Registrarse
               </Link>
             </Typography>
           </Box>

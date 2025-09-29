@@ -1,5 +1,5 @@
 const {Router} = require("express")
-const {createAlumno, getAlumno, getAlumnos, updateAlumno, deleteAlumno} = require("../../controllers/alumnos/alumno.controllers")
+const {createAlumno, getAlumno, getAlumnos, updateAlumno, deleteAlumno} = require("../../controllers/alumnos/alumnoControllers")
 const router = Router()
 
 router.get("/leerAlumnos", getAlumnos)
